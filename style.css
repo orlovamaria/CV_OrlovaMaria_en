@@ -1,0 +1,340 @@
+:root {
+    --color-basic-blue: #007ab4;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto/Roboto-Thin.ttf");
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto/Roboto-Regular.ttf");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto/Roboto-Bold.ttf");
+    font-weight: 700;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    background-color: #1d1b25;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Roboto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: unset;
+  }
+  
+  li {
+    margin: 0;
+    list-style: none;
+  }
+  
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #0390e0;
+  }
+  
+  .main-header__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  
+  .main-header__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .main__section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+  }
+  
+  .main__section:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    bottom: -27px;
+    left: 0;
+    right: 40px;
+    height: 3px;
+    background: linear-gradient(to right, var(--color-basic-blue), #007ab400); 
+  }
+  
+  .nav-list__link {
+    display: inline-block;
+    padding: 20px 20px;
+    font-size: 21px;
+    color: #000000;
+    transition: .3s;
+  }
+  
+  .nav-list__link:hover {
+    background-color: #70c6f5;
+  }
+  
+  .main__container {
+    display: flex;
+  }
+  
+  .general-info {
+    flex-grow: 1;
+    min-width: 30%;
+  }
+  
+  .general-info__photo {
+    width: 100%;
+    border-radius: 297px;
+  }
+  
+  .detailed-info {
+    flex-grow: 0;
+  }
+  
+  .main-section__title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+  
+  .main-section__content {
+    font-size: 20px;
+  }
+  
+  .main-section__title--dark {
+    color: var(--color-basic-blue);
+  }
+  
+  .main-section__title--light {
+    color: #3a3a3a;
+  }
+  
+  .section-list__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    width: 120px;
+    margin-right: 20px;
+    border-radius: 4px;
+    background-color: #8b8b8b;
+  }
+  
+  .progress-bar__progress {
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--color-basic-blue);
+  }
+  
+  .progress-bar__progress--dotnet {
+    width: 70%;
+  }
+  
+  .progress-bar__progress--dotnetcore {
+    width: 60%;
+  }
+  
+  .progress-bar__progress--aspnetcore {
+    width: 30%;
+  }
+  
+  .progress-bar__progress--csharp {
+    width: 70%;
+  }
+  
+  .progress-bar__progress--sql {
+    width: 50%;
+  }
+  
+  .progress-bar__progress--entityframework {
+    width: 60%;
+  }
+  
+  .progress-bar__progress--html {
+    width: 40%;
+  }
+  
+  .progress-bar__progress--css {
+    width: 30%;
+  }
+  
+  .progress-bar__progress--js {
+    width: 20%;
+  }
+  
+  .main-section__content--dark {
+    color: #a0a0a0;
+  }
+  
+  .main-section__content--light {
+    color: #3a3a3a;
+  }
+  
+  .section__link {
+    display: block;
+    transition: .3s;
+  }
+  
+  .section__link--dark:hover {
+    background-color: #35343a
+  }
+  
+  .section__link--light:hover {
+    background-color: #8b8b8b
+  }
+  
+  .section-item__content {
+    display: inline-block;
+    align-items: baseline;
+    padding: 5px 10px;
+  }
+  
+  .section-item__content::before {
+    display: inline-block;
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background-size: cover;
+    background-image: url(./assets/svg/li_point.svg);
+  }
+  
+  .section-item__content--email::before {
+    vertical-align: sub;
+    width: 25px;
+    height: 25px;
+    background-image: url(./assets/svg/email_blue.svg);
+  }
+  
+  .section-item__content--github::before {
+    vertical-align: sub;
+    width: 25px;
+    height: 25px;
+    background-image: url(./assets/svg/github_blue.svg);
+  }
+  
+  .section-item__content--linkedin::before {
+    vertical-align: sub;
+    width: 25px;
+    height: 25px;
+    background-image: url(./assets/svg/linkedin_blue.svg);
+  }
+  
+  .section-item__content--telegram::before {
+    vertical-align: sub;
+    width: 25px;
+    height: 25px;
+    background-image: url(./assets/svg/telegram_blue.svg);
+  }
+  
+  .section-item__content--location::before {
+    vertical-align: sub;
+    width: 25px;
+    height: 25px;
+    background-image: url(./assets/svg/location_blue.svg);
+  }
+  
+  .header-title {
+    padding: 30px 0 0 30px;
+  }
+  
+  .general-info {
+    display: flex;
+    flex-direction: column;
+    background-color: #29282c;
+  }
+  
+  .detailed-info {
+    display: flex;
+    flex-direction: column;
+    background-color: #b6b6b7;
+  }
+  
+  .detailed-info__header-title {
+    padding: 40px 80px;
+  }
+  
+  .detailed-info__header-title--lastname {
+    font-size: 60px;
+    font-weight: 400;
+  }
+  
+  .detailed-info__header-title--firstname {
+    font-size: 60px;
+    font-weight: 700;
+  }
+  
+  .detailed-info__header-title--profession {
+    font-weight: 700;
+    color: var(--color-basic-blue);
+  }
+  
+  .code-example__content {
+    border-left: 5px solid var(--color-basic-blue);
+    font-weight:bold;
+    font-size: 16px;
+  }
+  
+  .code-example__coment {
+    font-style: italic;
+    font-size: 14px;
+  }
+  
+  .code-example__coment::before {
+    content: "*";
+  }
+  
+  .main-footer__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .main-footer__rs-logo {
+    display: inline-block;
+  }
+  
+  .git-author__link {
+    display: inline-block;
+  }
+  
+  .git-author__img {
+    height: 40px;
+  }
+  
+  .rs-logo__link {
+    display: inline-block;
+  }
+  
+  .rs-logo__img {
+    height: 60px;
+    padding: 10px;
+  }
+  
